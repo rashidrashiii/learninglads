@@ -1,0 +1,122 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
+    input[type=file]::-ms-browse {
+  border: 2px solid #6c5ce7;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: #a29bfe;
+}
+
+input[type=file]::-webkit-file-upload-button {
+  border: 2px solid #6c5ce7;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: #a29bfe;
+  transition: 1s;
+}
+
+input[type=file]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: #a29bfe;
+  transition: 1s;
+}
+
+input[type=file]::-ms-browse:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+
+input[type=file]::-webkit-file-upload-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+
+
+</style>
+
+<main class="layout layout--3" xmlns="http://www.w3.org/1999/html">
+  <div class="container">
+    <!-- Topics Start -->
+
+      <div class="topics">
+    <div class="topics__header">
+        <h2>Menu</h2>
+    </div>
+    <ul class="topics__list">
+        <li>
+            <a href="/">Home</a>
+        </li>
+
+        <li>
+            <a href="/about">About</span></a>
+        </li>
+        <li>
+            <a href="/privacy-policy">Privacy Policy</span></a>
+        </li>
+        <li>
+            <a href="/terms-of-service">Tems of Service</span></a>
+        </li>
+
+    </ul>
+</div>
+
+    <!-- Topics End -->
+
+
+    <!-- Room List Start -->
+    <div class="roomList">
+
+
+      <div class="roomList__header">
+
+<!--          admin report form start here--><div><h1>About Us</h1></br>
+
+<p>Welcome to LearningLads, your number one source for all things [product]. We're dedicated to providing you the best of [product], with a focus on dependability. customer service, and [store characteristic].
+
+
+We're working to turn our passion for [product] into a booming online store. We hope you enjoy our products as much as we enjoy offering them to you.
+
+</p></br>
+          <p>
+Sincerely,
+
+[Rashid]
+</p>
+      </div>
+
+<!--          admin report form end here-->
+
+      </div>
+
+    </div>
+    <!-- Room List End -->
+
+    <!-- Activities Start -->
+
+      <div class="activities">
+    <div class="activities__header">
+        <h2>Contact Us</h2>
+    </div>
+    <div class="activities__box">
+        <h3>Contact us</h3></br>
+        <p>Phone : +91 6282746154</p>
+        <p>Email : contact@rashidweb.com</p>
+    </div>
+
+</div>
+
+    <!-- Activities End -->
+  </div>
+</main>
+
+{% endblock %}

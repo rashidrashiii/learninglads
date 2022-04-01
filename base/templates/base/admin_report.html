@@ -1,0 +1,176 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style type="text/css" rel="stylesheet">
+    input[type=file]::-ms-browse {
+  border: 2px solid #6c5ce7;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: #a29bfe;
+}
+
+input[type=file]::-webkit-file-upload-button {
+  border: 2px solid #6c5ce7;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: #a29bfe;
+  transition: 1s;
+}
+
+input[type=file]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: #a29bfe;
+  transition: 1s;
+}
+
+input[type=file]::-ms-browse:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+
+input[type=file]::-webkit-file-upload-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+
+
+</style>
+
+<main class="layout layout--3" xmlns="http://www.w3.org/1999/html">
+  <div class="container">
+    <!-- Topics Start -->
+
+      <div class="topics">
+    <div class="topics__header">
+        <h2>Menu</h2>
+    </div>
+    <ul class="topics__list">
+        <li>
+            <a href="/">Home</a>
+        </li>
+
+        <li>
+            <a href="/about">About</span></a>
+        </li>
+        <li>
+            <a href="/privacy-policy">Privacy Policy</span></a>
+        </li>
+        <li>
+            <a href="/terms-of-service">Tems of Service</span></a>
+        </li>
+
+    </ul>
+</div>
+
+    <!-- Topics End -->
+
+
+    <!-- Room List Start -->
+    <div class="roomList">
+
+
+      <div class="roomList__header">
+
+<!--          admin report form start here-->
+
+        <div>
+
+
+      <div class="layout__body">
+          <div>
+          <h1>
+             Report an issue with the home page or News Feed
+          </h1>
+      </div></br></br>
+          <div>
+          <p>
+              If you're having trouble with a blank home page, you've come to the right place. Please use this form to tell us about the issue you're experiencing.
+          </p>
+      </div>
+          </br>
+        <form class="form" action="" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+
+
+          <div class="form__group">
+            <label for="name">Your Name</label>
+            {{form.name}}
+          </div>
+
+          <div class="form__group">
+            <label for="subject">Subject</label>
+            {{form.subject}}
+          </div>
+
+            <div class="form__group">
+            <label for="username">Username of the person (If you are reporting a user)</label>
+            {{form.username}}
+          </div>
+
+            <div class="form__group">
+            <label for="description">Description</label>
+            {{form.description}}
+          </div>
+
+            <div class="form__group">
+            <label for="screenshot">Screenshot</label>
+<!--            <input type="file" name ='screenshot' id="fileUpload">-->
+                {{form.screenshot}}
+          </div>
+
+          <!-- <div class="form__group">
+            <label for="room_topic">Topic</label>
+            <input required type="text" name="topic" id="room_topic" list="topic-list" />
+            <datalist id="topic-list">
+              <select id="room_topic">
+                <option value="">Select your topic</option>
+                <option value="Python">Python</option>
+                <option value="Django">Django</option>
+              </select>
+            </datalist>
+
+          </div> -->
+
+
+          <div class="form__action">
+            <button class="btn btn--main" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+
+        </div>
+
+<!--          admin report form end here-->
+
+      </div>
+
+    </div>
+    <!-- Room List End -->
+
+    <!-- Activities Start -->
+
+      <div class="activities">
+    <div class="activities__header">
+        <h2>Contact Us</h2>
+    </div>
+    <div class="activities__box">
+        <h3>Contact us</h3></br>
+        <p>Phone : +91 6282746154</p>
+        <p>Email : contact@rashidweb.com</p>
+    </div>
+
+</div>
+
+    <!-- Activities End -->
+  </div>
+</main>
+
+{% endblock %}

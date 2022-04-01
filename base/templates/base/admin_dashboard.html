@@ -1,0 +1,145 @@
+<style type="text/css" rel="stylesheet">
+.divSizeo {
+  width: 520px;
+}
+
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 900px) {
+  .divSizeo {
+    width: 300px;
+  }
+}
+</style>
+
+<div class="roomList" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+      <div class="mobile-menu">
+
+        <div class="mobile-menuItems">
+          <a class="btn btn--main btn--pill" href="{% url 'admin-menu' %}">Menu</a>
+          <a class="btn btn--main btn--pill" href="{% url 'activity' %}">Recent Activities</a>
+        </div>
+      </div>
+
+
+<!--    main div start here-->
+      <div class="roomList__header">
+
+          <div style="display: grid;row-gap: 50px;grid-template-columns: auto;padding: 10px;">
+
+<!--          list start here-->
+        <div>
+
+            <div style="padding: 20px;">
+
+            <ul style="list-style-type:none;">
+
+             <div style="display:flex;">
+                <div style=" border-radius: 25px;background: #19282F;border: 2px solid #19282F;padding: 20px;width: 180px auto;height: 125px auto;">
+				<li>
+
+                    <div style="display:inline;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" version="1.1" viewBox="0 0 24 24">
+                        <title>admin</title>
+                        <path fill="#FFFFFF"  d="M12,2A10,10,0,0,0,4.65,18.76h0a10,10,0,0,0,14.7,0h0A10,10,0,0,0,12,2Zm0,18a8,8,0,0,1-5.55-2.25,6,6,0,0,1,11.1,0A8,8,0,0,1,12,20ZM10,10a2,2,0,1,1,2,2A2,2,0,0,1,10,10Zm8.91,6A8,8,0,0,0,15,12.62a4,4,0,1,0-6,0A8,8,0,0,0,5.09,16,7.92,7.92,0,0,1,4,12a8,8,0,0,1,16,0A7.92,7.92,0,0,1,18.91,16Z"/>
+                    </svg>
+                    </div>
+					<span class="text">
+						<h3 style="display:inline; font-size: 26px;">{{user_count}}</h3>
+						<p style=" font-size: 18px;">Users</p>
+					</span>
+				</li>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div style=" border-radius: 25px;background: #19282F;border: 2px solid #19282F;padding: 20px;width: 180px auto;height: 125px auto;">
+				<li>
+
+					<div style="display:inline;">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+					<span class="text">
+						<h3 style="display:inline; font-size: 26px;">{{room_count}}</h3>
+						<p style=" font-size: 18px;">Rooms</p>
+					</span>
+				</li>
+                </div>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <div style=" border-radius: 25px;background: #19282F;border: 2px solid #19282F;padding: 20px;width: 180px auto;height: 125px auto;">
+				<li>
+
+					<div style="display:inline;">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+					<span class="text">
+						<h3 style="display:inline; font-size: 26px;">{{messagecount}}</h3>
+						<p style=" font-size: 18px;">Messages</p>
+					</span>
+				</li>
+                </div>
+
+             </div>
+
+			</ul>
+            </div>
+        </div>
+
+<!--          list end here-->
+
+
+
+<!--          admin accounts starts here-->
+
+              <div style="padding: 20px;">
+          <div style="display: block; block;">
+          <div class="roomList__header" >
+        <div>
+
+<!--            user list starts here-->
+            <div class="divSizeo">
+            &nbsp;&nbsp;<h1>All admin accounts ({{staffcount}})</h1></br>
+
+            {% for stafflist in staff %}
+
+<div class="roomListRoom">
+    <div class="roomListRoom__header">
+        <a href="{% url 'user-profile' stafflist.id %}" class="roomListRoom__author">
+            <div class="avatar avatar--small">
+                <img src="{{stafflist.avatar.url}}" />
+            </div>
+            <span>@{{stafflist.username}}</span>
+        </a>
+        <div class="roomListRoom__actions" style="text-size: auto;">
+            <span>{{stafflist.created_on|timesince}} ago</span>
+        </div>
+    </div>
+    <div class="roomListRoom__content">
+        <a href="{% url 'user-profile' stafflist.id %}">{{stafflist.name}}</a>
+    </div>
+    <div class="roomListRoom__meta">
+
+    </div>
+</div>
+{% endfor %}
+
+<!--            user list end here-->
+
+
+        </div>
+
+
+      </div>
+          </div>
+              </div>
+
+<!--          admin accounts end here-->
+
+
+          </div>
+      </div>
+        </div>
+<!--    main div end here-->
+
+
+    </div>

@@ -1,0 +1,35 @@
+
+<div class="roomListRoom">
+    <div class="roomListRoom__header">
+        <a href="/" class="roomListRoom__author">
+            <div class="avatar avatar--small">
+                <img src="{{readedreport.user.avatar.url}}" />
+            </div>
+            <span>@{{readedreport.user.username}}</span>
+        </a>
+        <div class="roomListRoom__actions">
+            <span>{{readedreport.created|timesince}} ago</span>
+        </div>
+    </div>
+    <div class="roomListRoom__content">
+        <a>{{readedreport.subject}}</a>
+        <p>username of the user: {{readedreport.user}}</p>
+    </div>
+    <div class="roomListRoom__content">
+        <p>{{readedreport.description}}</p>
+    </div></br>
+
+
+    {% if readedreport.screenshot %}
+    <div class="roomListRoom__content">
+        <div style="width: auto;">
+        <img src="{{readedreport.screenshot.url}}">
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="roomListRoom__meta">
+
+    </div>
+
+</div>

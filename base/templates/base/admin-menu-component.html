@@ -1,0 +1,24 @@
+<div class="topics">
+    <div class="topics__header">
+        <h2>Admin Menu</h2>
+    </div>
+    <ul class="topics__list">
+        <li>
+            <a href="{% url 'admin-dashboard' %}" >Dashboard </a>
+        </li>
+
+        <li>
+            <a href="{% url 'users' %}">Users</a>
+        </li>
+        <li>
+            <a href="{% url 'reports' %}">Reports
+                {% if reportscount %}
+                <span>{{reportscount}}</span>
+                {% endif %}
+            </a>
+        </li>
+
+
+    </ul>
+
+</div>

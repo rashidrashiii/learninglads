@@ -1,0 +1,75 @@
+<style type="text/css" rel="stylesheet">
+.divSize {
+  width: 520px;
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 900px) {
+  .divSize {
+    width: 300px;
+  }
+}
+</style>
+<div class="roomList" xmlns="http://www.w3.org/1999/html">
+
+      <div class="mobile-menu">
+
+        <div class="mobile-menuItems">
+          <a class="btn btn--main btn--pill" href="{% url 'admin-menu' %}">Menu</a>
+          <a class="btn btn--main btn--pill" href="{% url 'activity' %}">Recent Activities</a>
+        </div>
+      </div>
+
+      <div class="roomList__header">
+        <div>
+
+<!--            user list starts here-->
+            &nbsp;&nbsp;<h1>All users ({{usercount}})</h1></br>
+        <div class="divSize">
+            {% for userlist in userprofile %}
+<div class="roomListRoom">
+    <div class="roomListRoom__header">
+        <a href="{% url 'user-profile' userlist.id %}" class="roomListRoom__author">
+            <div class="avatar avatar--small">
+                <img src="{{userlist.avatar.url}}" />
+            </div>
+            <span>@{{userlist.username}}</span>
+        </a>
+        <div class="roomListRoom__actions">
+            <span>{{userlist.created_on|timesince}} ago</span>
+        </div>
+    </div>
+    <div class="roomListRoom__content">
+        <a href="{% url 'user-profile' userlist.id %}">{{userlist.name}}</a>
+        <p>{{userlist.email}}</p>
+    </div>
+    <div class="roomListRoom__meta">
+        <a href="{% url 'delete-user' userlist.id %}" class="roomListRoom__joined">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                      <title>remove</title>
+                      <path
+                        d="M27.314 6.019l-1.333-1.333-9.98 9.981-9.981-9.981-1.333 1.333 9.981 9.981-9.981 9.98 1.333 1.333 9.981-9.98 9.98 9.98 1.333-1.333-9.98-9.98 9.98-9.981z">
+                      </path>
+                    </svg>
+             Delete user
+        </a>
+        <p class="roomListRoom__topic" style="display:none;">
+            </p>
+    </div>
+
+
+
+</div>
+{% endfor %}
+        </div>
+
+<!--            user list end here-->
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>

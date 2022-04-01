@@ -1,0 +1,111 @@
+<style type="text/css" rel="stylesheet">
+.divSize {
+  width: 520px;
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 900px) {
+  .divSize {
+    width: 300px;
+  }
+}
+</style>
+<div class="roomList" xmlns="http://www.w3.org/1999/html">
+
+      <div class="mobile-menu">
+
+        <div class="mobile-menuItems">
+          <a class="btn btn--main btn--pill" href="{% url 'admin-menu' %}">Menu</a>
+          <a class="btn btn--main btn--pill" href="{% url 'activity' %}">Recent Activities</a>
+        </div>
+      </div>
+        <!--            report list here-->
+    <div class="roomList__header">
+          {% if reports != None %}
+        <div class="divSize">
+        <div>
+            &nbsp;&nbsp;<h1>New Reports({{reportcount}})</h1></br>
+
+            {% for report in reports %}
+        <div class="roomListRoom">
+        <div class="roomListRoom__header">
+        <a href="/" class="roomListRoom__author">
+            <div class="avatar avatar--small">
+                <img src="{{report.user.avatar.url}}" />
+            </div>
+            <span>@{{report.user}}</span>
+        </a>
+        <div class="roomListRoom__actions">
+            <span>{{report.created|timesince}} ago</span>
+        </div>
+        </div>
+    <div class="roomListRoom__content">
+        <a href="{% url 'reportview' report.id %}">{{report.subject}}</a>
+    </div>
+    <div class="roomListRoom__meta">
+        <form action="/readreport" method="post">
+            {% csrf_token %}
+            <input type="text" name="reportid" value="{{report.id}}" hidden>
+        <button type="submit" href="/" class="roomListRoom__topic">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+             Mark as read
+        </button>
+        </form>
+        <p class="roomListRoom__topic" style="display:none;">
+            </p>
+    </div>
+</div>
+{% endfor %}
+
+        </div>
+             {% endif %}
+<!--                        report list end here-->
+
+<!--                      read  report list here-->
+
+            {% if readreport != None %}
+        <div>
+            &nbsp;&nbsp;<h1>All Reports ({{readreport.count}})</h1></br>
+            <div class="divSize">
+            {% for reportsin in readreport %}
+<div class="roomListRoom">
+    <div class="roomListRoom__header">
+        <a href="/" class="roomListRoom__author">
+            <div class="avatar avatar--small">
+                <img src="{{reportsin.user.avatar.url}}" />
+            </div>
+            <span>@{{reportsin.user}}</span>
+        </a>
+        <div class="roomListRoom__actions">
+            <span>{{reportsin.created|timesince}} ago</span>
+        </div>
+    </div>
+    <div class="roomListRoom__content">
+        <a href="{% url 'readed-reportview' reportsin.id %}">{{reportsin.subject}}</a>
+    </div>
+    <div class="roomListRoom__meta">
+
+        <p class="roomListRoom__topic" style="display:none;">
+            </p>
+    </div>
+
+
+
+</div>
+{% endfor %}
+        </div>
+
+            {% endif %}
+<!--          read  report list end here-->
+
+
+
+    </div>
+        </div>
+
+
+
+
+
+    </div>
+</div>
