@@ -108,9 +108,6 @@ Project Screenshots
 -------------------
 
 ![Screenshot 1](https://github.com/rashidrashiii/learninglads/blob/main/static/images/screenshoteasy%20(1).png)
-
-![Screenshot 2](https://ibb.co/qB9w0Nf)
-
-![Screenshot 3](https://ibb.co/GxW7ZRz)
-
-![Screenshot 4](https://ibb.co/Pg5JRCy)
+![Screenshot 2](https://github.com/rashidrashiii/learninglads/blob/main/static/images/screenshoteasy%20(2).png)
+![Screenshot 3](https://github.com/rashidrashiii/learninglads/blob/main/static/images/screenshoteasy%20(3).png)
+![Screenshot 4](https://github.com/rashidrashiii/learninglads/blob/main/static/images/screenshoteasy%20(4).png)
