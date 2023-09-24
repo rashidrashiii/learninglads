@@ -26,7 +26,7 @@ Ensure you have the following dependencies installed on your system:
 2.  Navigate to the directory where you want to store the project files.
 3.  Clone the LearningLads repository by running the following command:
 
-    git clone https://github.com/yourusername/LearningLads.git
+    git clone https://github.com/rashidrashiii/LearningLads.git
 
 Replace `yourusername` with your GitHub username if you forked the repository.
 
@@ -97,7 +97,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Contact
 -------
 
-If you have any questions, feedback, or issues related to LearningLads, feel free to contact us at [your@email.com](mailto:your@email.com).
+If you have any questions, feedback, or issues related to LearningLads, feel free to contact us at [rashidwebco@email.com](mailto:rashidwebco@email.com).
 
 Happy Learning with LearningLads! 📚👨‍🎓👩‍🎓
 
