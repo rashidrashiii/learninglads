@@ -107,7 +107,7 @@ Happy Learning with LearningLads! 📚👨‍🎓👩‍🎓
 Project Screenshots
 -------------------
 
-![Screenshot 1]([https://ibb.co/g37Mw7k](https://github.com/rashidrashiii/learninglads/blob/main/static/images/screenshoteasy%20(1).png))
+![Screenshot 1](https://github.com/rashidrashiii/learninglads/blob/main/static/images/screenshoteasy%20(1).png)
 
 ![Screenshot 2](https://ibb.co/qB9w0Nf)
 
