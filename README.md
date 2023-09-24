@@ -28,7 +28,6 @@ Ensure you have the following dependencies installed on your system:
 
     git clone https://github.com/rashidrashiii/LearningLads.git
 
-Replace `yourusername` with your GitHub username if you forked the repository.
 
 ### Set Up Virtual Environment (Optional)
 
