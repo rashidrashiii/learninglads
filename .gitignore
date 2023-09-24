@@ -1,0 +1,15 @@
+learninglads/settings.py
+
+db.sqlite3
+*/migrations/
+
+static
+
+venv
+
+.vscode/
+.idea/
+.pyc
+__pycache__/
+*.suo
+*.log
