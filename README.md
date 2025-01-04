@@ -96,7 +96,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Contact
 -------
 
-If you have any questions, feedback, or issues related to LearningLads, feel free to contact us at [rashidwebco@email.com](mailto:rashidwebco@email.com).
+If you have any questions, feedback, or issues related to LearningLads, feel free to contact us at [rashiofficialemail@gmail.com](mailto:rashiofficialemail@gmail.com).
 
 Happy Learning with LearningLads! 📚👨‍🎓👩‍🎓
 
